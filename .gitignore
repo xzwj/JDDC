@@ -101,9 +101,9 @@ ENV/
 .mypy_cache/
 
 # data files
-.txt
-.csv
-.zip
+*.txt
+*.csv
+*.zip
 dataset/
 data/
 res/

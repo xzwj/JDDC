@@ -7,7 +7,8 @@ import sys
 sys.path.append('/submitwork/')
 
 # ======== Replace with your real import ======== #
-from baseline import run_prediction
+# from baseline import run_prediction
+from TFIDF_baseline import run_prediction
 
 if __name__ == '__main__':
     try:
