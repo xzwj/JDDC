@@ -2,10 +2,13 @@
 
 import jieba
 import codecs
+# import os
 
 class Seg(object):
+    # print (os.getcwd())
     stopwords = []
-    stopword_filepath="./TFIDF_baseline/stopwordList/stopword.txt"
+    # stopword_filepath="./TFIDF_baseline/stopwordList/stopword.txt"
+    stopword_filepath="./stopwordList/stopword.txt"
 
     def __init__(self):
         self.read_in_stopword()
