@@ -8,8 +8,8 @@ from tqdm import tqdm
 
 if __name__ == '__main__':
     # 读入训练集
-    file_obj = FileObj(r"dataSet/trainQuestions.txt")  
-    train_sentences = file_obj.read_lines()
+    # file_obj = FileObj(r"dataSet/trainQuestions.txt")  
+    # train_sentences = file_obj.read_lines()
    
 
     # 读入测试集
@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # 训练模型
     ss = SentenceSimilarity(seg)
-    ss.set_sentences(train_sentences)
+    ss.set_sentences(test_sentences)
     ss.TfidfModel()         # tfidf模型
 
     # 测试集
@@ -32,8 +32,8 @@ if __name__ == '__main__':
     with open("dataSet/trainAnswers.txt",'r',encoding = 'utf-8') as file_answer:
         line = file_answer.readlines()
            
-    for i in tqdm(range(0,len(train_sentences))):
-        top_15 = ss.similarity(train_sentences[i])
+    for i in tqdm(range(0,len(test_sentences))):
+        top_15 = ss.similarity(test_sentences[i])
         
         for j in range(0,len(top_15)):
             answer_index=top_15[j][0]
